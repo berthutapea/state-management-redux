@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --accent-color: #00796b;
+  --foreground-color: #0F1419;
+  --background-color: white;
+  --gray-dark-color: #66757F;
+  --gray-light-color: #edeff1;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--foreground-color);
+  background-color: var(--background-color);
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.loading {
+  position: sticky;
+  top: 0;
+}
+
+.login-page, .register-page {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+}
+
+.login-page__hero, .register-page__hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 160px;
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+.login-page__main, .register-page__main {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-direction: column;
+  padding: 64px;
+}
+
+.login-page__main h2, .register-page h2 {
+  font-weight: 300;
+  font-size: 48px;
+}
+
+.login-input input, .register-input input {
+  display: block;
+  width: 100%;
+  padding: 12px 8px;
+  margin: 8px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--gray-dark-color);
+}
+
+.login-input button, .register-input button {
+  margin-top: 12px;
+  width: 100%;
+  padding: 12px 8px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  border: 0;
+  background-color: var(--accent-color);
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.home-page {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.navigation {
+  padding: 6px;
+  min-height: 55px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.navigation img {
+  width: 32px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+.navigation nav {
+  flex: 1;
+}
+
+.navigation nav a {
+  text-decoration: none;
+  color: var(--foreground-color);
+  font-weight: bold;
+}
+
+.navigation button {
+  border: 0;
+  background-color: transparent;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.talks-list {
+  margin-bottom: 32px;
+}
+
+.talk-item {
+  padding: 16px;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  border: 1px solid rgb(243, 243, 243);
+  border-bottom: 0;
+}
+
+.talk-item:last-of-type {
+  border-bottom: 1px solid rgb(243, 243, 243);
+}
+
+.talk-item:hover {
+  background-color: var(--gray-light-color);
+}
+
+.talk-item__user-photo img {
+  width: 40px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.talk-item__detail {
+  flex: 1;
+}
+
+.talk-item__detail header {
+  display: flex;
+  margin-bottom: 4px;
+}
+
+.talk-item__user-info {
+  flex: 1;
+}
+
+.talk-item__detail .talk-item__created-at {
+  color: var(--gray-dark-color);
+  font-size: 15px;
+}
+
+.talk-item__detail .talk-item__user-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.talk-item__detail .talk-item__user-id {
+  font-size: 15px;
+  color: var(--gray-dark-color);
+}
+
+.talk-item__detail .talk-item__text {
+  font-size: 15px;
+}
+
+.talk-item__detail .talk-item__likes {
+  margin-top: 12px;
+}
+
+.talk-item__likes p {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  gap: 8px;
+}
+
+.talk-item__likes p button {
+  display: flex;
+  border: 0;
+  background-color: transparent;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.talk-input, .talk-reply-input {
+  margin-bottom: 16px;
+}
+
+.talk-input textarea, .talk-reply-input textarea {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--background-color);
+  border-color: var(--gray-light-color);
+  padding: 8px;
+  width: 100%;
+  height: 150px;
+  resize: none;
+  font-size: 15px;
+}
+
+.talk-input button, .talk-reply-input button {
+  background-color: var(--accent-color);
+  font-family: 'Open Sans', sans-serif;
+  color: var(--background-color);
+  font-weight: 600;
+  font-size: 15px;
+  border: 0;
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.talk-input__char-left, .talk-reply-input__char-left {
+  font-size: 15px;
+  margin: 6px 0 8px 0;
+  color: var(--gray-dark-color);
+}
+
+.detail-page {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.detail-page__parent {
+  margin-bottom: 64px;
+}
+
+.detail-page__parent h3 {
+  margin: 8px 0 16px 0;
+}
+
+.talk-detail {
+  margin-top: 32px;
+}
+
+.talk-detail header {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.talk-detail header img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.talk-detail__user-info {
+  font-size: 20px;
+}
+
+.talk-detail__user-name {
+  font-weight: 600;
+}
+
+.talk-detail__text {
+  font-size: 20px;
+}
+
+.talk-detail footer {
+  margin-top: 32px;
+  display: flex;
+}
+
+.talk-detail__like {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+}
+
+.talk-detail__like button {
+  background-color: transparent;
+  border: 0;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+.talk-reply-input {
+  margin-top: 32px;
+}
+
+@media screen and (min-width: 850px) {
+  .login-page, .register-page {
+    grid-template-columns: 1.25fr 1fr;
+  }
+}

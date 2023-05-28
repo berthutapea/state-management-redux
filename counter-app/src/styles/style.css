@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #2c3e50;
+  color: white;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 200;
+  text-align: center;
+}
+
+button {
+  margin: 20px;
+  width: 150px;
+  font-size: 48px;
+  background-color: transparent;
+  cursor: pointer;
+  user-select: none;
+  border: 2px solid;
+  border-radius: 8px;
+  transition: all 0.1s ease-in-out;
+}
+
+button.decrease {
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
+button.decrease:active {
+  color: white;
+  background-color: #e74c3c;
+}
+
+button.increase {
+  border-color: #2ecc71;
+  color: #2ecc71;
+}
+
+button.increase:active {
+  color: white;
+  background-color: #2ecc71;
+}
