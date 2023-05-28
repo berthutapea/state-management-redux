@@ -1,1 +1,1 @@
-# state-management-redux
+# State Management (Redux)
